@@ -1,6 +1,4 @@
-=================================
-Decision Trees
-=================================
+# Decision Trees
 DT_train_binary(X, Y, max_depth)
 Here is the process for how my DT_train_binary() function works. It works recursively, returning a tree of Binary Nodes.
 	- We get the total entropy for current label set.
@@ -35,10 +33,7 @@ DT_make_prediction() works recursively.
 		+ Similarly, if the feature is “1”, we then check to see if the given decision tree has a right Node.
 			=> (Recursive call) If we do, we call DT_make_prediction() on this Node.
 			=> Otherwise, we return the decision the tree made on the right.
-
-=================================
-NearestNeighbors
-=================================
+# Nearest Neighbors
 KNN_test(X_train,Y_train,X_test,Y_test,K)
 KNN_test() works by going through each of the test vectors, finding the K closest vectors from the training set, and making a decision based on the majority of the labels for the closest vectors. We then calculate the accuracy by dividing the number of correct decisions by the number of overall tests.
 	- We go through each vector in X_test.
@@ -54,9 +49,7 @@ KNN_test() works by going through each of the test vectors, finding the K closes
 				- Once the decision has been made, we will store whether or not the decision was correct.
 	- Once we make a decision for each test vector, we will calculate the accuracy by dividing the number of correct decisions by the number of decisions in total, and return that number.
 
-=================================
-Clusters
-=================================
+# Clusters
 K_Means(X, K, mu)
 K_Means() works by calculating K cluster centers for the sample list X.
 	- K_Means() takes mu as a list of centers to start with. However, if mu is empty, we will randomly choose K vectors from the dataset as our centers.
